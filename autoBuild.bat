@@ -1,0 +1,1 @@
+coffee -o source\js -cw source\coffee

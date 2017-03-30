@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Jasmine Spec Runner</title>
+  <link rel="shortcut icon" type="image/png" href="../input/jasmine-standalone-1.1.0/lib/jasmine-1.1.0/jasmine_favicon.png">
+  <link rel="stylesheet" type="text/css" href="../input/jasmine-standalone-1.1.0/lib/jasmine-1.1.0/jasmine.css">
+  <script type="text/javascript" src="../input/jasmine-standalone-1.1.0/lib/jasmine-1.1.0/jasmine.js"></script>
+  <script type="text/javascript" src="../input/jasmine-standalone-1.1.0/lib/jasmine-1.1.0/jasmine-html.js"></script>
+  
+  <script type="text/javascript" src="js/3p/jquery-1.8.3.min.js"></script>
+
+  <script type="text/javascript" src="js/src/reactive.js"></script>
+  <script type="text/javascript" src="js/spec/reactive.spec.js"></script>
+  
+  <script type="text/javascript" src="js/src/components.js"></script>
+  <script type="text/javascript" src="js/spec/components.spec.js"></script>
+
+  <script type="text/javascript" src="js/src/jqueryReactive.js"></script>
+  <script type="text/javascript" src="js/spec/jqueryReactive.spec.js"></script>
+
+  <script type="text/javascript" src="js/src/using.js"></script>
+  <script type="text/javascript" src="js/spec/using.spec.js"></script>
+  
+  <script type="text/javascript" src="js/src/openLanguageWeb.js"></script>
+
+  <script type="text/javascript" src="js/spec/openLanguageWeb.testHelpers.js"></script>
+
+  <script type="text/javascript" src="js/src/openLanguageWeb.documentStorage.js"></script>
+  <script type="text/javascript" src="js/spec/openLanguageWeb.documentStorage.spec.js"></script>
+
+  <script type="text/javascript" src="js/src/openLanguageWeb.liveRepository.js"></script>
+  <script type="text/javascript" src="js/spec/openLanguageWeb.liveRepository.spec.js"></script>
+
+  <script type="text/javascript" src="js/src/openLanguageWeb.reactiveRepository.js"></script>
+  <script type="text/javascript" src="js/spec/openLanguageWeb.reactiveRepository.spec.js"></script>
+
+  <script type="text/javascript" src="js/src/openLanguageWeb.builders.js"></script>
+  <script type="text/javascript" src="js/spec/openLanguageWeb.builders.spec.js"></script>
+  
+  <script type="text/javascript" src="js/src/openLanguageWeb.interpreter.js"></script>
+  <script type="text/javascript" src="js/spec/openLanguageWeb.interpreter.spec.js"></script>
+  
+  
+  <script type="text/javascript">
+    (function() {
+      var jasmineEnv = jasmine.getEnv();
+      jasmineEnv.updateInterval = 1000;
+
+      var trivialReporter = new jasmine.TrivialReporter();
+
+      jasmineEnv.addReporter(trivialReporter);
+
+      jasmineEnv.specFilter = function(spec) {
+        return trivialReporter.specFilter(spec);
+      };
+
+      var currentWindowOnload = window.onload;
+
+      window.onload = function() {
+        if (currentWindowOnload) {
+          currentWindowOnload();
+        }
+        execJasmine();
+      };
+
+      function execJasmine() {
+        jasmineEnv.execute();
+      }
+
+    })();
+  </script>
+</head>
+
+<body>
+</body>
+</html>
